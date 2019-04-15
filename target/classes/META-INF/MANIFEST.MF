@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
-Implementation-Title: fdn.as2.spring.hibernate.user
+Implementation-Title: springboot.hibernate.crud-user
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: DatVNDong
-Implementation-Vendor-Id: fdn.as2.spring.hibernate.user
+Implementation-Vendor-Id: springboot.hibernate.crud-user
 Build-Jdk: 1.8.0_192
-Implementation-URL: http://projects.spring.io/spring-boot/fdn.as2.spri
- ng.hibernate.user/
+Implementation-URL: http://projects.spring.io/spring-boot/springboot.h
+ ibernate.crud-user/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 
