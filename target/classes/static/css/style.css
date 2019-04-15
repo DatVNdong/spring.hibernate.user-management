@@ -1,0 +1,148 @@
+.font-set {
+  font-family: "Times New Roman", Times, serif;
+}
+.font-set hr {
+  border-top: 1px solid white;
+  margin-top: -2px;
+  margin-bottom: 0px;
+  text-align:center;
+  width: 82%;
+}
+.first-letter {
+  font-size: xx-large;
+}
+.name-content {
+  float: left;
+}
+.arrow-shape {
+  display: flex; 
+  justify-content: flex-end; 
+  float: right;
+  margin-top: -10px;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 6px solid #36519d;
+  border-bottom: 8px solid transparent;
+  float: left;
+  margin-top: 12px;
+}
+.rectangle-vertical {
+  height: 40px;
+  width: 3px;
+  background-color: #36519d;
+  float: left;
+}
+.click-path {
+	background-color: #f2f2f2; 
+	margin-left: 250px; 
+	height: 45px; 
+	border-left: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+.path-content {
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+}
+.click-path > a:hover {
+  text-decoration: none;
+}
+.asterik {
+  color: red;
+  font-weight: bold;
+}
+.height-1 {
+  height: 70px;
+}
+.height-2 {
+  height: 100px;
+}
+.height-3 {
+  height: 150px;
+}
+.form-div-content {
+  border: 1px solid #e5e5e5;
+  margin-left: 3px;
+  position: relative;
+}
+.label-1, .label-2, .label-3 {
+  background-color: #f2f2f2;
+  color: #4d556c;
+  margin: 0px 0px 0px 15px;
+  padding: 0px;
+  padding-left: 5px;
+}
+.label-1 {
+  line-height: 70px;
+}
+.label-2 {
+  line-height: 100px;
+}
+.label-3 {
+  line-height: 150px;
+}
+.input-form {
+  padding-left: 5px;
+}
+.checkbox-content {
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.checkbox-content > label {
+  margin-left: 10px;
+}
+.select-content {
+  margin-top: 8px;
+  width: auto;
+}
+.text-content-1, .text-content-2, .password-content-1, .password-content-2 {
+  margin-top: 8px;
+  width: 170px;
+}
+.text-content-2, .password-content-1 {
+  background-color: #e8f0fe;
+}
+.password-content-1, .password-content-2 {
+  font-size:20px;
+  float: left;
+}
+.password-content-2 {
+  margin-top: 0px;
+}
+.auto-button {
+  background-color: #87b87f;
+  border-color: #68a65e;
+  color: white;
+  height: 38px;
+  margin-left: 4px;
+  margin-top: 6px;
+  width: 150px;
+}
+#confirm-text {
+  line-height: 62px;
+  margin: 0px auto;
+}
+.cancel-button, .save-button {
+  color: white;
+  height: 42px;
+  width: 150px;
+}
+.cancel-button {
+  background-color: #d15b47;
+  border-color: #b4722e;
+  margin: 4px 5px 0px 15px;
+}
+.save-button {
+  background-color: #6fb3e0;
+  border-color: #459dd7;
+}
+.dbtable {
+  margin-top: 15px;
+}

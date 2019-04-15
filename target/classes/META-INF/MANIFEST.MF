@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: fdn.as2.spring.hibernate.user
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: DatVNDong
+Implementation-Vendor-Id: fdn.as2.spring.hibernate.user
+Build-Jdk: 1.8.0_192
+Implementation-URL: http://projects.spring.io/spring-boot/fdn.as2.spri
+ ng.hibernate.user/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

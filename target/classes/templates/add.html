@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns= "http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:include="fragments/header :: header"></head>
+<body>
+    <div id="wrapper">
+		<div th:include="fragments/navigation :: navigation"></div>
+		<div class="click-path">
+			<a class="path-content" href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard ></a>
+			<a class="path-content" th:href="@{/UserList}">UserList ></a>
+			<a class="path-content" th:href="@{/UserAddition}">UserAddition</a>
+		</div>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="page-header" style="color: #4284cf">User addition</h4>
+                    <form th:action="@{/UserAction/save}" th:object="${user}" method="post" onsubmit="return validateSubmit()">
+                    	<input type="hidden" th:field='${user.id}' />
+                    	<div class="row form-group">
+                    		<input type="hidden" name="list-service-size" th:value='0' />
+							<label class="form-div-content col-lg-1 label-1 height-1">Service <span class="asterik">*</span></label>
+							<div class="form-div-content input-form col-lg-4 height-1">
+                                <div class="checkbox checkbox-content required-1">
+                                	<th:block th:each="dbservice : ${dbservices}">
+	                                    <label th:inline="text">
+	                                    	<input type="checkbox" th:field="*{listServices}" th:value="${dbservice.idService}" />[[${dbservice.nameService}]]
+	                                    </label>
+                                    </th:block>
+                                </div>
+							</div>
+						</div>
+                        <div class="row form-group">
+                        	<input type="hidden" name="list-type-size" th:value='0' />
+                            <label class="form-div-content col-lg-1 label-1 height-1">Type <span class="asterik">*</span></label>
+                            <div class="form-div-content input-form col-lg-4 height-1">
+                                <div class="checkbox checkbox-content required-2">
+                                	<th:block th:each="dbtype : ${dbtypes}">
+	                                    <label th:inline="text">
+	                                    	<input type="checkbox" th:field="*{listTypes}" th:value="${dbtype.idType}" />[[${dbtype.nameType}]]
+	                                    </label>
+                                    </th:block>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="form-div-content col-lg-1 label-2 height-2">Company <span class="asterik">*</span></label>
+                            <div class="form-div-content input-form col-lg-4 height-2">
+                                <select class="form-control select-content" th:field="*{company}">
+                                    <option value="1">Com 1</option>
+                                    <option value="2">Com 2</option>
+                                    <option value="3">Com 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="form-div-content col-lg-1 label-2 height-2">Branch</label>
+                            <div class="form-div-content input-form col-lg-4 height-2">
+                                <select class="form-control select-content" th:field="*{branch}">
+                                    <option value="0"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="form-div-content col-lg-1 label-2 height-2">Team</label>
+                            <div class="form-div-content input-form col-lg-4 height-2">
+                                <select class="form-control select-content" th:field="*{team}">
+                                    <option value="0"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="form-div-content col-lg-1 label-2 height-2">User ID <span class="asterik">*</span></label>
+                            <div class="form-div-content input-form col-lg-4 height-2">
+                                <input class="form-control text-content-1" required="required" maxlength="50" th:field="*{userId}" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="form-div-content col-lg-1 label-2 height-2">User name <span class="asterik">*</span></label>
+                            <div class="form-div-content input-form col-lg-4 height-2">
+                                <input class="form-control text-content-2" required="required" name="username" maxlength="20" th:field="*{username}" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="form-div-content col-lg-1 label-3 height-3">Password <span class="asterik">*</span></label>
+                            <div class="form-div-content input-form col-lg-4 height-3">
+                                <input type="password" class="form-control password-content-1" required="required" name="password" maxlength="50" th:field="*{password}" />
+                                <button type="button" class="auto-button">Auto</button>
+                                <p id="confirm-text">❈ Please enter for confirmation</p>
+                                <input type="password" class="form-control password-content-2" required="required" maxlength="50" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <button class="cancel-button" type="reset">Cancel</button>
+                            <button class="save-button" type="submit" name="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+	<div th:include="fragments/footer :: footer"></div>
+	<!-- My JavaScript -->
+    <script src="/js/script.js"></script>
+    <script type="text/javascript">setDefaultValue()</script>
+</body>
+</html>
